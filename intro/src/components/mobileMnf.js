@@ -6,3 +6,5 @@ function MobileMnf(){
         <List title="Mobile Manufacturers" arr = {mobMnf} />
     )
 }
+
+export default MobileMnf
