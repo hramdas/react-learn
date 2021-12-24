@@ -1,0 +1,17 @@
+button{
+    padding: 5px;
+    font-size: 18px;
+    color: white;
+    margin : 3px
+}
+.btn1{
+    background-color: rgb(54, 54, 184);
+}
+.btn2{
+    background-color: rgb(155, 41, 41);
+}
+input{
+    padding: 3px;
+    font-size: 18px;
+    width: 80px;
+}
