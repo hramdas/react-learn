@@ -22,7 +22,10 @@ function Grocery (){
     return(
          <>
             <GroceryInput getData={handleList}/>
+            <div className="grocaryitems">
             {list.map((e)=> <GroceryList getRemove={handleRemove} key={e.id} item={e}/> )}
+            </div>
+           
             
          </>
      ) 

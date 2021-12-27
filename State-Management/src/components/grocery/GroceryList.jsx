@@ -2,10 +2,10 @@
 function GroceryList({item, getRemove}){
 
     return(
-        <>
-            <p>{item.title}</p>
-            <button onClick={()=>getRemove(item.id)}>Remove</button>
-        </>
+        <div id="item">
+            <span>{item.title}</span>
+            <button onClick={()=>getRemove(item.id)}>X</button>
+        </div>
     )
 }
 

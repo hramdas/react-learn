@@ -12,8 +12,8 @@ function GroceryInput({getData}){
 
     return(
         <>
-            <input onChange={handleChange} placeholder="Enter Item" type="text" />
-            <button onClick={handleInput}>Add</button>
+            <input required onChange={handleChange} placeholder="Enter Item" type="text" />
+            <button id="inputbtn" onClick={handleInput}>Add</button>
         </>
     )
 }
