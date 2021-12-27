@@ -7,12 +7,12 @@ function Todo(){
   const [list, setList] = React.useState([])
 
   const handleClick = (data)=>{
-    let params = {
+    let payload = {
       title : data,
       status : false,
       id : nanoid(7)
     }
-    setList([...list, params])
+    setList([...list, payload])
 }
 
  return (
