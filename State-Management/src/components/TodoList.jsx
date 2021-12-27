@@ -1,16 +1,19 @@
 import React from "react";
 
-function TodoList({item}){
-    const handleStatus = (id) =>{
-        item.status = !item.status
-    }
-    
+function TodoList({item, handleStatus}){
+
+    // const handleStatus = (id) =>{
+    //     handleStatus(id)
+    // }
+
     return (
         <>
-        <span>
-        <h2>{item.title} - {item.status ? "Done" : "Not done"}</h2>
-        <button onClick={()=>handleStatus(item.id)}></button>
-        </span>
+        <div>
+            <span>{item.title} - {item.status ? "Done" : "Not done"}</span>
+            <button onClick={()=>handleStatus(item.id, item)}>Mark done</button>
+        </div>
+      
+  
         </>
     )
 }

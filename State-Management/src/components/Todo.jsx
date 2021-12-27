@@ -7,7 +7,7 @@ function Todo(){
   const [list, setList] = React.useState([])
 
   const handleClick = (data)=>{
-    let payload = {
+    const payload = {
       title : data,
       status : false,
       id : nanoid(7)
@@ -15,12 +15,20 @@ function Todo(){
     setList([...list, payload])
 }
 
+const handleStatus = ({key, e})=>{
+  const editStatus = {id : e.id, title: e.title, status: !e.status}
+
+  let res = list.map((item)=> item.id !== key ? item : editStatus);
+
+  setList(res)
+}
+
  return (
    <>
    < TodoInput getData = {handleClick} />
    <div>
     {list.map((e)=>(
-      <TodoList key={e.id} item={e} />
+      <TodoList key={e.id} item={e} handleStatus={handleStatus} />
     ))}
    </div>
   
