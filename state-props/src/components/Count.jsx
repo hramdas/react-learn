@@ -3,14 +3,18 @@ import React from 'react'
 
 function Counter(){
   const [count, setCount]  = React.useState(1)
+  const [query, setQuery] = React.useState()
 
   const handleChange = (val)=>{
       setCount(count + val)
   }
 
   const handleInput = (e)=>{
-    setCount( (+e.target.value))
-    console.log(e.target.value)
+    setQuery( (+e.target.value))
+  }
+
+  const handleUpdate = ()=>{
+    setCount(query)
   }
 
     return(
@@ -19,7 +23,8 @@ function Counter(){
                 <h1>Counter : {count}</h1>
                 <h3>Counter is {count%2 === 0 ? "Even" : "Odd"} </h3>
 
-                <input value = {count} onChange={handleInput} type="number" />
+                <input value = {query} onChange={handleInput} type="number" />
+                <button onClick={()=>handleUpdate()}>Update</button>
 
                 <br />
 
