@@ -12,19 +12,21 @@ function Form(){
         photo : ""
     })
 
-    const fileRef = useRef()
+    let fileRef = useRef(null)
     const handleChange = (e)=>{
         let {name, value, checked, type} = e.target;
         value = type === "checkbox" ? checked : value;
-        value = type === "file" ? fileRef.current.files[0].name : value;
-
+        
         setForm({
-            ...form, [name] : value
+            ...form,
+            [name] : value,
         })
     }
-    async function handleSubmit (e){
 
+    async function handleSubmit (e){
         e.preventDefault()
+        let file = URL.createObjectURL(fileRef.current.files[0])
+        form.photo = file
 
         fetch("http://localhost:3001/forms",{
             "method" : "POST",
@@ -34,18 +36,16 @@ function Form(){
             "body": JSON.stringify(form)
         })
         .then(res => res.json())
-        .then(result => {
+        .then(result => { 
             console.log(result)
             alert("Form submites");
         })
-
         // console.log(form, fileRef.current.files[0])
     }
 
     return(
         <div>
   
-
         <form className="form" onSubmit={handleSubmit}>
             <input onChange={handleChange} name="name" type="text" placeholder="Enter Name" required/>
             <input onChange={handleChange} name="age" type="number" placeholder="Enter age" required/>
