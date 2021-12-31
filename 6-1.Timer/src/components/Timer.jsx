@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 
-function Timer(){
-    let [time, setTime] = useState(0)
+function Timer(props){
+    let [time, setTime] = useState(props.initial)
 
     useEffect(()=>{
         const id = setInterval(()=>{
             setTime((p)=>{
-                if(p===10){
+                if(p === props.end){
                     clearInterval(id)
-                    return 10
+                    return props.end
                 }
                 return p+1
             })
         }, 1000)
 
     }, [])
+    
     return(
         <>
             <h1>Timer : {time}</h1>

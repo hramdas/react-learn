@@ -1,19 +1,20 @@
 import './App.css';
-import Counter from './components/Counter'
 import Timer from './components/Timer'
 import {useState} from 'react'
 
 function App() {
-  const [showcounter, setShowcounter] = useState(false)
+  const [showtime, setShowtime] = useState(true)
+  const [start, setStart] = useState(0)
+  const end = 3
+
  return(
    <div className='App'>
+      {/* < Timer initial={start} end={end}  /> */}
 
-      < Timer />
-      <hr />
+      { showtime ? < Timer initial={start} end={end}  /> : null}
 
-      { showcounter ? < Counter /> : null}
-
-      <button onClick={ ()=>setShowcounter(!showcounter)} >{showcounter ? "Hide" : "Show"}</button>
+      <button onClick={ ()=>setShowtime(!showtime)} >{showtime ? "Hide" : "Show"}</button>
+      
    </div>
  )
 }
