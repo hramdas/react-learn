@@ -1,0 +1,34 @@
+{
+  "forms": [
+    {
+      "name": "RAMDAS GANPATRAO HEDGAPURE",
+      "address": "Hyderabad",
+      "age": "46",
+      "department": "Finance ",
+      "salary": "96000",
+      "isMarried": true,
+      "photo": "blob:http://localhost:3000/e6cd90da-25a0-416c-8771-cbf53c524587",
+      "id": 3
+    },
+    {
+      "name": "Ram Patil",
+      "address": "Pune MH",
+      "age": "23",
+      "department": "Human Resource",
+      "salary": "60000",
+      "isMarried": false,
+      "photo": "blob:http://localhost:3000/e0ced76e-fc6f-4dde-9ef1-410d3a24002d",
+      "id": 4
+    },
+    {
+      "name": "Anu Shinde",
+      "address": "Bidar Karnataka",
+      "age": "2",
+      "department": "Sales ",
+      "salary": "86000",
+      "isMarried": true,
+      "photo": "blob:http://localhost:3000/e016031f-37fa-4bb6-9053-50f04d2434dc",
+      "id": 5
+    }
+  ]
+}
