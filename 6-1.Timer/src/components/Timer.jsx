@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  
     background-color:#77D970;
     color : #ce0764;
     font-size:23px;

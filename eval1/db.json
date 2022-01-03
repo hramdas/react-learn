@@ -1,0 +1,20 @@
+{
+  "recipe": [
+    {
+      "title": "Biiryani",
+      "ingredients": "Bown, Chicken",
+      "time": "30",
+      "image": "https://foodish-api.herokuapp.com/images/biryani/biryani38.jpg",
+      "instructions": "This Veg Biryani is an authentic Indian vegetarian recipe packed full of your favorite rice, veggies, and spices. Made with patience and lots of love, this delicious veg dum biryani requires both care and attention to detail. The savory flavors in your first bite are well worth the time and effort spent in the kitchen.",
+      "id": 1
+    },
+    {
+      "title": "Veg fried rice",
+      "ingredients": "Rice, oil. tomato",
+      "time": "25",
+      "image": "https://foodish-api.herokuapp.com/images/biryani/biryani38.jpg",
+      "instructions": "This Veg Biryani is an authentic Indian vegetarian recipe packed full of your favorite rice, veggies, and spices. Made with patience and lots of love, this delicious veg dum biryani requires both care and attention to detail. The savory flavors in your first bite are well worth the time and effort spent in the kitchen.",
+      "id": 2
+    }
+  ]
+}
