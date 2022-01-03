@@ -10,6 +10,7 @@ const Div = styled.div`
         margin-bottom : 5px;
         font-size : 15px;
         padding : 3px 10px;
+        font-weight : 600;
     }
 `
 const Button = styled.button`
@@ -21,8 +22,6 @@ const Button = styled.button`
 `
 
 function List ({itemList, view}){
-    
-
     const viewClick= (id)=>{
         view(id)
     }

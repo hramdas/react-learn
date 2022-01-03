@@ -16,8 +16,10 @@ grid-template-columns: 50% 45%;
 `
 function Single({item}){
 console.log(item)
-    return(
+        if(!item.title ) return <h2 > ^^ Select recipe ^^</ h2>
+        return(
         <>
+
             {<Div id="single">
                 <span>
                     <h2>{item.title}</ h2>

@@ -9,12 +9,20 @@
       "id": 1
     },
     {
-      "title": "Veg fried rice",
-      "ingredients": "Rice, oil. tomato",
-      "time": "25",
-      "image": "https://foodish-api.herokuapp.com/images/biryani/biryani38.jpg",
-      "instructions": "This Veg Biryani is an authentic Indian vegetarian recipe packed full of your favorite rice, veggies, and spices. Made with patience and lots of love, this delicious veg dum biryani requires both care and attention to detail. The savory flavors in your first bite are well worth the time and effort spent in the kitchen.",
+      "ingredients": " tomato, butter and cashew sauce",
+      "title": "Paneer Butter Masala",
+      "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-1.jpg",
+      "time": "45",
+      "instructions": "This Paneer Butter Masala recipe is a rich and creamy dish of paneer (cottage cheese) in a tomato, butter and cashew sauce (known as Makhani gravy).  The dish has a lovely tang coming from the tomatoes and is slightly sweet with a creamy and velvety feel to it.   With my easy, quick and delicious recipe you can prepare this restaurant style paneer butter masala recipe within minutes.  Called by various names such as butter paneer or butter paneer masala or paneer makhani this dish is of the most popular Indian paneer dish. Obviously being so popular it is served in many Indian restaurants.",
       "id": 2
+    },
+    {
+      "title": "Pav Bhaji Recipe ",
+      "ingredients": "Mix Vegetables. I add a mix of veggies like cauliflower, carrots, potatoes, capsicum and green peas.",
+      "time": "30",
+      "instructions": "My recipe traces back to my teens when I would make this delightful dish for my parents and sister. Whenever we would go to Juhu beach in Mumbai, pav bhaji was one snack we would always gorge upon.  I have fond memories of savoring pav bhaji and other Mumbai street food snacks in my childhood at Juhu beach. And it is from this place that I have picked up the fine nuances and inspiration of making this decades old recipe.  To make my version, specifically the bhaji – onion, ginger-garlic paste, tomatoes, are sautéed in butter first. Later to which boiled and mashed vegetables are added followed by pav bhaji masala.  The bhaji or vegetable gravy is simmered for some minutes and served steaming hot with buttered and lightly toasted bread rolls.  While in the streets and in restaurants, they make pav bhaji on a large flat tawa (griddle). But when making at home you can easily use a wok (kadai) or skillet or a frying pan.  Ingre",
+      "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/pav-bhaji-recipe-1.jpg",
+      "id": 3
     }
   ]
 }

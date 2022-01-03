@@ -10,14 +10,13 @@ const Div = styled.div`
     grid-template-columns: 40% 40%;
     margin: auto 50px;
     align-items:center;
-    background-color: #d1d1d1ad;
+    background-color: #e7e7e7ac;
 `
 
 function Recipe(){
     let [recipeData, setRecipe] = useState()
     // const [single, setSingle] = useState()
     const [singleItem, setSingleItem] = useState(1)
-
     const handleForm = (text) =>{
         fetch('http://localhost:3001/recipe',{
             "method" : "POST",
@@ -30,7 +29,7 @@ function Recipe(){
         .then(result=>{
             console.log(result)
         })
-        // recipeItems()
+        recipeItems()
     }
     async function  recipeItems(){
         await fetch('http://localhost:3001/recipe')
@@ -40,6 +39,7 @@ function Recipe(){
             console.log(result)
         })
     }
+
     useEffect(() => {
         recipeItems()
     }, []);
