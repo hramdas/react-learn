@@ -12,18 +12,15 @@ export const UserList = () =>{
             setUsers(result.data)
         })
     }
-    // getUser()
     useEffect(()=>{
         getUser()
     },[]) 
 
     return(
         <div>
-        
         {
             users.map((e)=>(<h2 key={e.id}> <Link to={`/userpage/${e.id}`} >{e.first_name}</Link> </h2>))
         }
-
         </div>
     )
 }
