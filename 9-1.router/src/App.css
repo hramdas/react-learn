@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+#navbar{
+  /* width: 400px; */
+  display: flex;
+  justify-content:space-evenly;
+  margin: auto;
+  font-size: 20px;
+  background-color: aqua;
+  padding: 10px;
+}
+#items{
+  display: grid;
+  width: 400px;
+  margin: auto;
+  background-color: #FFCCD2;
+  border-radius : 10px;
+  
+}
+#items #row{
+  display: flex;
+  justify-content: space-evenly;
+ border: 1px solid gray;
+}
