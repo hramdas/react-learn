@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom"
-import { useEffect, useReducer, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useEffect, useState, useContext } from "react"
+import { useParams, Navigate } from "react-router-dom"
+import { AuthContext } from "../contexts/AuthContext"
 
 export const UserPage = () =>{
     const [user, setUser] = useState()
     const {id} = useParams()
+     const {token} = useContext(AuthContext);
 
     function Userdata(){
         fetch(`https://reqres.in/api/users/${id}`)
@@ -16,9 +17,13 @@ export const UserPage = () =>{
 
     useEffect(()=>{
         Userdata()
-    },[]) 
+    },[id]) 
 
     // console.log(user)
+
+    if(!token){
+        return <Navigate to={"/login"} />
+    }
 
     return(
         <div style={{margin:"20px"}}>

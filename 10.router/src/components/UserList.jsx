@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { Link, Navigate, useNavigate,useLocation} from "react-router-dom"
+import { useEffect, useState, useContext } from "react"
+import { AuthContext } from "../contexts/AuthContext";
+// const {token} = useContext(AuthContext);
 
 export const UserList = () =>{
     const [users, setUsers] = useState([])
@@ -15,6 +17,11 @@ export const UserList = () =>{
     useEffect(()=>{
         getUser()
     },[]) 
+
+    // if(!token){
+    //     return <Navigate to={"/login"}/>
+    // }
+
 
     return(
         <div>
