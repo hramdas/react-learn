@@ -14,13 +14,11 @@ export const UserPage = () =>{
             setUser(result.data)
         })
     }
-
     useEffect(()=>{
         Userdata()
     },[id]) 
 
     // console.log(user)
-
     if(!token){
         return <Navigate to={"/login"} />
     }
@@ -36,7 +34,6 @@ export const UserPage = () =>{
                     <img src={user.avatar} alt="avatarimg"/>
                 </div>
             }
-
         </ div>
     )
 }
