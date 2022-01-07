@@ -1,4 +1,4 @@
-const reducer = (state, {type, payload}) =>{   //check type and decide command
+export const reducer = (state, {type, payload}) =>{   //check type and decide command
         switch(type){
             case "INC_COUNT" :
                 return {...state, count : state.count + payload};
