@@ -1,7 +1,8 @@
 // const action = {type : "",  payload : ""};  //Fixed   //payload optional
 // const decCountAction = {type : "DEC_COUNT",  payload : 1};
 
-const {createStore} = require('redux')
+import {createStore} from 'redux';
+import { reducer } from './reducer.js';
 
 
 // class Store {
@@ -20,17 +21,17 @@ const {createStore} = require('redux')
 
 //pure function 
 //Fixed
-const reducer = (state, {type, payload}) =>{   //check type and decide command
-    switch(type){
-        case "INC_COUNT" :
-            return {...state, count : state.count + payload};
-        case "DEC_COUNT" :
-            return {...state, count : state.count - payload};
+// const reducer = (state, {type, payload}) =>{   //check type and decide command
+//     switch(type){
+//         case "INC_COUNT" :
+//             return {...state, count : state.count + payload};
+//         case "DEC_COUNT" :
+//             return {...state, count : state.count - payload};
 
-        default :
-            return state;
-    }
-};
+//         default :
+//             return state;
+//     }
+// };
 
 const init = { count : 1}
 
