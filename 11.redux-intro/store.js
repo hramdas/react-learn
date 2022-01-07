@@ -3,7 +3,7 @@
 
 import {createStore} from 'redux';
 import { reducer } from './reducer.js';
-import 
+import  {INC_COUNT, DEC_COUNT} from './actionTypes.js'
 
 // class Store {
 //     constructor(reducer, init){
@@ -38,7 +38,7 @@ const init = { count : 1}
 const store = new createStore(reducer, init);  // Fixed
 console.log(store.getState())
 
-store.dispatch({type : "INC_COUNT", payload : 1})
+store.dispatch({type : INC_COUNT, payload : 1})
 
 console.log(store.getState())
 
