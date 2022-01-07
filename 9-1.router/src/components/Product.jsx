@@ -3,17 +3,22 @@ import { useEffect, useState } from "react";
 
 export const Product = () =>{
     const {id} = useParams()
-    const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState()
     
     useEffect(() => {
-       fetch(`http://localhost:3000/products/${id}`)
-       .then((req)=>req.json())
-       .then((res)=>setProduct(res))
-       .catch(err=>{
-        //    setProduct(err)
-           console.log(err)
+       fetch(`http://localhost:3001/products/${id}`)
+       .then( async (data)=>{
+           if(data.ok){
+               data = await data.json()
+               setProduct(data)
+           }
+        })
+
+       .catch((err)=>{
+            // setProduct(err)
+            console.log(err)
        })
-    },[])
+    },[id])
 
     if(!product) return <div>Product does not exist</div>
     // if(product.length == 0)

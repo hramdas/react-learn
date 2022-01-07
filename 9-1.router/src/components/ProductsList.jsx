@@ -4,7 +4,7 @@ export const ProductsList = () =>{
     const [list, setList] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('http://localhost:3001/products')
         .then((req)=>req.json())
         .then((res)=>{
             setList(res)
