@@ -1,8 +1,10 @@
+import { INC_COUNT, DEC_COUNT } from "./actionTypes";
+
 export const reducer = (state, {type, payload}) =>{   //check type and decide command
         switch(type){
-            case "INC_COUNT" :
+            case INC_COUNT :
                 return {...state, count : state.count + payload};
-            case "DEC_COUNT" :
+            case DEC_COUNT :
                 return {...state, count : state.count - payload};
     
             default :

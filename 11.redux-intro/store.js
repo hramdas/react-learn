@@ -39,6 +39,7 @@ const store = new createStore(reducer, init);  // Fixed
 console.log(store.getState())
 
 store.dispatch({type : INC_COUNT, payload : 1})
+store.dispatch({type : DEC_COUNT, payload : 1})
 
 console.log(store.getState())
 
