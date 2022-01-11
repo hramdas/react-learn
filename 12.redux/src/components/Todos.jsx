@@ -4,8 +4,14 @@ import {addTodoLoading, addTodoSuccess, getTodoSuccess} from '../store/action'
 
 export const Todos = ()=>{
     const [text, setText] = useState("")
-    const {todos} = useSelector(state=>state.todos)
+    const {loading, todos, error} = useSelector(state=>state.todos)
     console.log(todos)
+
+    // function (prev, curr){
+    //     if(prev.loading == curr.loading ){
+
+    //     }
+    // }
     const dispatch = useDispatch()
 
     useEffect(() => {
