@@ -1,18 +1,19 @@
-import { ADD_SUCCESS, ADD_LOADING, ADD_ERROR } from "./actiontypes";
+import { ADD_SUCCESS, ADD_LOADING, ADD_ERROR } from "./actionTypes";
 
+export const addLoading = ()=>{
+    return {
+        type : ADD_LOADING
+    }
+}
 export const addSuccess = (data)=>{
     return {
         type : ADD_SUCCESS,
         payload : data,
     }
 }
-export const addLoading = ()=>{
+export const addError = (err)=>{
     return {
-        type : ADD_LOADING
-    }
-}
-export const addError = ()=>{
-    return {
-        type : ADD_ERROR
+        type : ADD_ERROR,
+        payload : err
     }
 }
