@@ -1,4 +1,4 @@
-import { ADD_SUCCESS, ADD_LOADING, ADD_ERROR } from "./actionTypes";
+import { ADD_SUCCESS, ADD_LOADING, ADD_ERROR, GET_SUCCESS, GET_LOADING, GET_ERROR } from "./actionTypes";
 
 export const addLoading = ()=>{
     return {
@@ -14,6 +14,23 @@ export const addSuccess = (data)=>{
 export const addError = (err)=>{
     return {
         type : ADD_ERROR,
+        payload : err
+    }
+}
+export const getLoading = ()=>{
+    return {
+        type : GET_LOADING
+    }
+}
+export const getSuccess = (data)=>{
+    return {
+        type : GET_SUCCESS,
+        payload : data
+    }
+}
+export const getError = (err)=>{
+    return{
+        type : GET_ERROR,
         payload : err
     }
 }

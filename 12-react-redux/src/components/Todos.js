@@ -1,11 +1,33 @@
-import { useState } from "react";
-import { addSuccess, addError, addLoading } from "../stores/action";
+import { useState, useEffect } from "react";
+import { addSuccess, addError, addLoading, getSuccess, getError, getLoading } from "../stores/action";
 import { useSelector, useDispatch } from "react-redux";
 
 export const Todos = ()=>{
    const [text, setText] = useState("");
-   const todos = useSelector((state)=>state.todos)
+   const {loading, todos, error} = useSelector((state)=>({
+       loading : state.loading,
+       todos : state.todos,
+       error : state.error
+    }))
    const dispatch = useDispatch()
+
+   useEffect(()=>{
+    getTodos()
+   },[])
+
+   async function getTodos(){
+        try{
+            dispatch(getLoading())
+            fetch("http://localhost:3001/todos")
+            .then(req=>req.json())
+            .then(res=>{
+                console.log(res)
+                dispatch(getSuccess(res))
+            })
+        } catch(err){
+            dispatch(addError(err))
+        }
+    }
 
 
    const handleClick = ()=>{
@@ -18,12 +40,14 @@ export const Todos = ()=>{
             body : JSON.stringify({ status : false, title : text })
         })
         .then((req)=>req.json())
-        .then((res)=>
+        .then((res)=>{
             dispatch(addSuccess(res))
+            getTodos()
+        }
         )
-        // .catch((err)=>dispatch(addError(err)))
-   
+        .catch((err)=>dispatch(addError(err)))
    }
+   //{getLoading? }
 
    return(
        <div>
@@ -31,6 +55,9 @@ export const Todos = ()=>{
                setText(e.target.value)
            }} />
            <button onClick={()=>handleClick()} >ADD TODO</button>
+           <div>
+               {todos.map((e)=><div key={e.id}>{e.title}</div>)}
+           </div>
        </div>
    )
 }
