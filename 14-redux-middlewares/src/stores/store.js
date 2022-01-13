@@ -18,22 +18,24 @@ const rootReducer = combineReducers({
 
 const logger1 = (store)=>(next)=>(action)=>{
     //console.log('logger1')
-    console.time('p1')
-    next(action)
+    //console.time('p1')
+    next(action)   //call logger2
     //console.log('logger existing 1')
-    console.timeEnd('p1')
+    //console.timeEnd('p1')
 }
 const logger2 = (store)=>(next)=>(action)=>{
-    console.log('logger2')
-    console.time('p2')
+    //console.log('logger2', action)
+    //console.time('p2')
+
     next(action)
-    console.log('logger existing 2')
-    console.timeEnd('p2')
+    //console.log('logger existing 2')
+   // console.timeEnd('p2')
 }
 
 //All reducers
 export const store = createStore(rootReducer,
     applyMiddleware(logger1, logger2)
+
  //window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
