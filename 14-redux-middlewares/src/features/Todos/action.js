@@ -34,6 +34,7 @@ export const getError = (err)=>{
         payload : err
     }
 }
+ ///middleware
 export const getData = (dispatch)=>{
     dispatch(getLoading())
 

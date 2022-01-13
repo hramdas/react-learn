@@ -19,7 +19,7 @@ export const Todos = ()=>{
    },[])
 
    async function getTodos(){
-       dispatch(getData)
+       dispatch(getData)   ///middleware
         // try{
         //     dispatch(getLoading())
         //     fetch("http://localhost:3001/todos")
@@ -33,6 +33,8 @@ export const Todos = ()=>{
     }
 
    const handleClick = ()=>{
+    //    dispatch(addData)
+    
        dispatch(addLoading())
        fetch("http://localhost:3001/todos",{
             method : "POST",
