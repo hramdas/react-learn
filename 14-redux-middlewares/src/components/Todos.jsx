@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { addSuccess, addError, addLoading, getSuccess, getError, getLoading } from "../features/Todos/action";
+import { addSuccess, addError, addLoading, getSuccess, getError, getLoading, getData } from "../features/Todos/action";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -19,16 +19,17 @@ export const Todos = ()=>{
    },[])
 
    async function getTodos(){
-        try{
-            dispatch(getLoading())
-            fetch("http://localhost:3001/todos")
-            .then(req=>req.json())
-            .then(res=>{
-                dispatch(getSuccess(res))
-            })
-        } catch(err){
-            dispatch(addError(err))
-        }
+       dispatch(getData())
+        // try{
+        //     dispatch(getLoading())
+        //     fetch("http://localhost:3001/todos")
+        //     .then(req=>req.json())
+        //     .then(res=>{
+        //         dispatch(getSuccess(res))
+        //     })
+        // } catch(err){
+        //     dispatch(addError(err))
+        // }
     }
 
    const handleClick = ()=>{

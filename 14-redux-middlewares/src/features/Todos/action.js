@@ -34,6 +34,16 @@ export const getError = (err)=>{
         payload : err
     }
 }
-export const getData = ()=>{
-    //
+export const getData = (dispatch)=>{
+    dispatch(getLoading)
+     
+    dispatch(getLoading())
+    fetch("http://localhost:3001/todos")
+    .then(req=>req.json())
+    .then(res=>{
+        dispatch(getSuccess(res))
+    })
+    .catch((err)=>{
+        dispatch(addError(err))
+    }) 
 }
