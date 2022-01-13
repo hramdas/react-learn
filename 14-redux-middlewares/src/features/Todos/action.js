@@ -34,3 +34,6 @@ export const getError = (err)=>{
         payload : err
     }
 }
+export const getData = ()=>{
+    //
+}
