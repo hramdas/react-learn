@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { Reducer as TodosReducer } from "../features/Todos/reducer";
 import { Reducer as CounterReducer } from "../features/Counter/reducer";
 
@@ -34,9 +34,10 @@ const logger2 = (store)=>(next)=>(action)=>{
 
 //All reducers
 export const store = createStore(rootReducer,
-    applyMiddleware(logger1, logger2)
+    compose( applyMiddleware(logger1, logger2) , window.__REDUX_DEVTOOLS_EXTENSION__())   
+    
 
- //window.__REDUX_DEVTOOLS_EXTENSION__()
+ //
 )
 
 //console.log("Entire state", store.getState())
