@@ -35,9 +35,8 @@ export const getError = (err)=>{
     }
 }
 export const getData = (dispatch)=>{
-    dispatch(getLoading)
-     
     dispatch(getLoading())
+
     fetch("http://localhost:3001/todos")
     .then(req=>req.json())
     .then(res=>{

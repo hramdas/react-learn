@@ -19,7 +19,7 @@ export const Todos = ()=>{
    },[])
 
    async function getTodos(){
-       dispatch(getData())
+       dispatch(getData)
         // try{
         //     dispatch(getLoading())
         //     fetch("http://localhost:3001/todos")
