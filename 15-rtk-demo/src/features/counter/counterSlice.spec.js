@@ -2,6 +2,7 @@ import counterReducer, {
   increment,
   decrement,
   incrementByAmount,
+  reset
 } from './counterSlice';
 
 describe('counter reducer', () => {
