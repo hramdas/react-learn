@@ -48,3 +48,8 @@ function App() {
 
 export default App;
 `
+
+
+## related repo
+* Context Api : https://github.com/hramdas/react-learn/tree/master/8-1-AuthContext
+* Routing : https://github.com/hramdas/react-learn/tree/master/9-1.router
