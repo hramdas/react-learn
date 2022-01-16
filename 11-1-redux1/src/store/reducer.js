@@ -2,7 +2,8 @@
 
 import { ADD_LOADING, ADD_TODO, ADD_ERROR, GET_LOADING, GET_TODO, GET_ERROR } from "./actionTypes";
 
-export const reducer = (state, {type, payload})=>{
+const init = {loading : false, todos : [], error : false}
+export const reducer = (state = init, {type, payload})=>{
     switch(type){
         case ADD_LOADING:
             return{

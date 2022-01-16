@@ -19,6 +19,12 @@ export const addErro = ()=>{
     }
 }
 
+export const getLoading= ()=>{
+    return {
+        type : GET_LOADING
+       
+    }
+}
 export const getTodo = (data)=>{
     return {
         type : GET_TODO,

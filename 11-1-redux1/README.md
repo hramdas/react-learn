@@ -3,5 +3,18 @@
 * Store : Object which holds the state of aplication. It brings together state, actions and reducers. Only single store in Redux app. Store has single root reducer.
 functions associated with store : createStore() & dispatch(action)
 
-
 Changes made with pure function
+
+
+## File Structure;
+
+* index.js
+```
+import {Provider} from 'react-redux'
+import {store} from ''
+
+    <ReduxProvider store={store}>
+      <App />
+    </ReduxProvider>
+
+```

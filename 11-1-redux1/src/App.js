@@ -6,8 +6,9 @@ import {Input} from './components/Input'
 function App() {
   return (
     <div className="App">
-      < Todo />
+      <h1>Todo List</h1>
       < Input />
+      < Todo />
     </div>
   );
 }
