@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+- Action : What to do? pure object
+- Reducer : How to do? take current state and action, and return new state
+- Store : Object which holds the state of aplication. It brings together state, actions and reducers. Only single store in Redux app. Store has single root reducer.
+  functions associated with store : createStore() & dispatch(action)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Changes made with pure function
 
-## Available Scripts
+## Redux setup File Structure;
 
-In the project directory, you can run:
+- index.js
 
-### `npm start`
+```ruby
+import {Provider} from 'react-redux'
+import {store} from ''
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    <ReduxProvider store={store}>
+      <App />
+    </ReduxProvider>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
 
-### `npm test`
+- store/sctionTypes.js   //not compolsary
+```ruby
+    export const ADD_SUCCESS = "ADD_SUCCESS"
+    export const ADD_LOADING = "ADD_LOADING"
+    export const ADD_ERROR = "ADD_ERROR"
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- store/action.js  //What to do?
+```ruby
+    import { ADD_SUCCESS, ADD_LOADING, ADD_ERROR} from "./actionTypes";
+    export const addLoading = ()=>{
+        return {
+            type : ADD_LOADING
+        }
+    }
+    export const addSuccess = (data)=>{
+        return {
+            type : ADD_SUCCESS,
+            payload : data,
+        }
+    }
+```
+- store/reducer.js  //How to do? take current state and action, and return new state
+```ruby
+    import { ADD_SUCCESS, ADD_LOADING, ADD_ERROR} from "./actionTypes";
 
-### `npm run build`
+    const init = {loading : false, todos : [], error : false}
+    export const Reducer = (state = init, {type, payload}) =>{
+        switch(type){
+            case ADD_LOADING:
+                return{
+                    ...state,
+                    loading : true
+                };
+            case ADD_SUCCESS:
+                return{
+                    ...state,
+                    todos : [...state.todos, payload],   //adding payload to state
+                    loading : false
+                };
+            case ADD_ERROR:
+                return{
+                    ...state,
+                    loading : false,
+                    error : true
+                };
+            default:
+                return state;
+        }
+    }
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- store/store.js
+```ruby
+    import { createStore } from "redux";
+    import { Reducer } from "./reducer";
+    export const store = createStore(Reducer)
+```
+- to use redux dev tool
+```ruby
+    export const store = createStore(Reducer, window.__REDUX_DEVTOOLS_EXTENSION__())
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Redux state use with components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```ruxy
+import { addSuccess, addError, addLoading } from "../stores/action";
+import { useSelector, useDispatch } from "react-redux";
 
-### `npm run eject`
+ const {loading, todos, error} = useSelector((state)=>({  //initial state
+       loading : state.loading,
+       todos : state.todos,
+       error : state.error
+    }))
+    const dispatch = useDispatch()
+     async function getTodos(){
+        try{
+            dispatch(getLoading())
+            fetch("http://localhost:3001/todos")
+            .then(req=>req.json())
+            .then(res=>{
+                dispatch(getSuccess(res))  //to redux state
+            })
+        } catch(err){
+            dispatch(addError(err))
+        }
+    }
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
