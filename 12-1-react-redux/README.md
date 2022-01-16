@@ -84,7 +84,7 @@ import {store} from ''
 
 ## Redux state use with components
 
-```ruxy
+```ruby
 import { addSuccess, addError, addLoading } from "../stores/action";
 import { useSelector, useDispatch } from "react-redux";
 
