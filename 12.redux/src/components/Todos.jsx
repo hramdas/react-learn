@@ -4,7 +4,12 @@ import {addTodoLoading, addTodoSuccess, getTodoSuccess} from '../store/action'
 
 export const Todos = ()=>{
     const [text, setText] = useState("")
-    const {loading, todos, error} = useSelector(state=>state.todos)
+    const {loading, todos, error} = useSelector(state=>({
+        loading : state.loading,
+        todos : state.todos,
+        error:  state.error
+    }))
+
     console.log(todos)
 
     // function (prev, curr){
