@@ -1,7 +1,8 @@
 ## Private Routing
 
  * file : src\components\PrivateRoute.jsx
-`import {useContext} from 'react'
+```ruby
+import {useContext} from 'react'
 import { AuthContext } from "../contexts/AuthContext";
 import { Navigate } from "react-router-dom";
 
@@ -12,11 +13,12 @@ export const PrivateRoute = ({children}) =>{
         return <Navigate to={"/login"} />
     }
     return children  //if logedin
-}`
+}
+```
 
 
 * file : src\App.js
-`
+```ruby
 import './App.css';
 import { Home } from './components/Home';
 import  {Navbar} from './components/Navbar';
@@ -47,7 +49,7 @@ function App() {
 }
 
 export default App;
-`
+```
 
 
 ## related repo
