@@ -26,7 +26,6 @@ export const JobsList = () => {
     if(!list){
         return <h1>Loading...</h1>
     }
-
     return (
         <div>
             {/* <Navbar /> */}

@@ -10,7 +10,7 @@
     {
       "id": 1,
       "name": "Ram",
-      "email": "abc@x.com",
+      "email": "ab@x.com",
       "password": "12",
       "role": "admin"
     }
@@ -37,8 +37,32 @@
       "salary": "333333",
       "location": "Pune",
       "type": "Remote",
-      "description ": "Writer job in pune",
+      "description": "Writer job in pune",
       "id": 5
+    },
+    {
+      "title": "Sales manger",
+      "salary": "1000000",
+      "location": "Pune",
+      "type": "Remote",
+      "description": "sales job in pune",
+      "id": 6
+    },
+    {
+      "title": "marketing head",
+      "salary": "1500000",
+      "location": "Pune",
+      "type": "Remote",
+      "description": "Marketing head job in pune",
+      "id": 7
+    },
+    {
+      "title": "SDE",
+      "salary": "1800000",
+      "location": "Hyderabad",
+      "type": "Remote",
+      "description": "DEveloper",
+      "id": 8
     }
   ]
 }

@@ -4,9 +4,12 @@ import { useContext } from "react";
 
 export const PostRoute = ({children}) => {
     const {user} = useContext(AuthContext)
-    // console.log(user.role)
-    if(!user || user.role !== "admin" || user.role !== "company"){
+    if(!user ){
         return <Navigate to={"/login"} />
     }
-    return children
+    if(user.role === "admin" || user.role === "company")  return children
+    if(user.role !== "admin" || user.role !== "company"){
+        return <Navigate to={"/login"} />
+    }
+
 }

@@ -28,7 +28,6 @@ export const Login = () => {
     if(user) {
         return <div>
             <h1>Your not alowed to do this</h1>
-
             <Navigate to="/">Jobs</Navigate>
             </div>
     }
