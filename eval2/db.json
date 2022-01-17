@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ramdas",
+      "email": "abc@x.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": 1,
+      "name": "Ram",
+      "email": "abc@x.com",
+      "password": "12",
+      "role": "admin"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Manager",
+      "salary": 100000,
+      "description": "Manager job description",
+      "location": "Pune",
+      "type": "office"
+    },
+    {
+      "id": 2,
+      "title": "Developer",
+      "salary": 900000,
+      "description": "developer job description",
+      "location": "Mumbai",
+      "type": "remote"
+    },
+    {
+      "title": "writer",
+      "salary": "333333",
+      "location": "Pune",
+      "type": "Remote",
+      "description ": "Writer job in pune",
+      "id": 5
+    }
+
+    
+  ]
+}
