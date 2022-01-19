@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  margin: 5% auto;
+}
+
+#main > div{
+  margin: 5px auto;
+  width: 400px;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+#main > div > span {
+  width : 70px;
+  font-size: small;
+  border: 1px solid red;
+  border-radius: 10px
+}
