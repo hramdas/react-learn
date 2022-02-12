@@ -9,7 +9,6 @@ export const AllComments = () => {
       {commentsData.replies.map((comments)=>
          <Comment key={comments.id} data={comments} />
       )}
-      
     </div>
   )
 }
@@ -27,6 +26,24 @@ replies: [
     body: "First comment",
     timestamp: "Sun Aug 02 2020 18:12:45 GMT+0530",
     points: "3",
+    replies : [
+      {
+         id: "3",
+      author: "haren",
+      body: "Wrote the test suites, waiting for approval?",
+      timestamp: "Sun Aug 02 2020 18:12:45 GMT+0530",
+      points: "3",
+      replies : [
+        {
+           id: "3",
+          author: "haren",
+          body: "Wrote the test suites, waiting for approval?",
+          timestamp: "Sun Aug 02 2020 18:12:45 GMT+0530",
+          points: "3",
+        }
+      ]
+      }
+    ]
   },
   {
     id: "3",

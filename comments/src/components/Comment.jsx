@@ -7,6 +7,13 @@ export const Comment = ({data}) => {
     <div className='comment' >
             <p>{data.author + ' - id:' + data.id }</p>
             <b>{data.body}</b>
+            <span>
+                <button>Reply</button>
+                <button>Give Award</button>
+                <button>Share</button>
+                <button>Report</button>
+                <button>Save</button>
+            </span>
         
         {data.replies ? data.replies.map((replie)=>
             <Comment data={replie} />
