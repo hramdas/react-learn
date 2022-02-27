@@ -27,7 +27,7 @@ function Timer({data}){
     let [time, setTime] = useState(start)
 
     useEffect(()=>{
-        let id = setInterval(()=>{
+         var id = setInterval(()=>{
             setTime((p)=>{
                 if(p === end){
                     clearInterval(id)
@@ -38,24 +38,25 @@ function Timer({data}){
         }, 1000)
 
         //To stop memory leak
-        return ()=>{
-            // console.log('unmounted')
-            clearInterval(id)
-        };
-       
-    }, [time])
+        // return ()=>{
+        //     // console.log('unmounted')
+        //     clearInterval(id)
+        // };
 
-    const handleStop = (id)=>{
+    }, [])
+
+    function handleStop(id){
         clearInterval(id)
         setTime((p)=>p
         )
+        console.log(id)
     }
     
     return(
         <>
             <H1>Timer : {time}</H1>
 
-            {/* <button onClick={handleStop}>Stop</button> */}
+            <button onClick={handleStop}>Stop</button>
 
             <Button onClick={()=>setTime(start)}>Restart</Button>
         </>

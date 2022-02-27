@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 export const AuthContext = createContext() //type
 
 export const AuthContextProvider = ({children})=>{
@@ -26,7 +25,7 @@ export const AuthContextProvider = ({children})=>{
      }
  }
 
- const value = {token, handleLogin, handleToken}
+const value = {token, handleLogin, handleToken}
     return <AuthContext.Provider value={value}>
         {children}
     </AuthContext.Provider>

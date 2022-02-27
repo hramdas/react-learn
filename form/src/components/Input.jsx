@@ -23,7 +23,7 @@ function Input( {postData}){
     }
 
     return(
-        <>
+      
         <form className="form" onSubmit={submitForm}>
              <input onChange={handleChange} name="name" type="text" placeholder="Enter Name" required/>
              <input onChange={handleChange} name="age" type="number" placeholder="Enter age" required/>
@@ -47,7 +47,6 @@ function Input( {postData}){
              <input ref={fileRef} id="file" onChange={handleChange} name="photo" type="file" placeholder="Photo" required/>
              <input id="submit" type="submit" />
          </form>
-        </>
     )
 }
 

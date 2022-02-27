@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import {Button, Div, Input, Form} from '../styled/Button'
-import { Button } from '@mui/material';
+import {Btn, Div, Input, Form} from '../styled/Btn'
+// import { Button } from '@mui/material';
 
 
 function Style(){
@@ -23,8 +23,7 @@ function Style(){
         </Div>
 
         <hr />
-       
-
+        
         </>
     )
 }

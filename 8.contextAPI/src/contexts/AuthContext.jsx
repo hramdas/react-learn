@@ -1,9 +1,9 @@
-import { Children, createContext } from "react";
+import {createContext } from "react";
 
 export const AuthContext = createContext()
 
-export const AuthContextProvider = ({Children}) =>{
+export const AuthContextProvider = ({children}) =>{
     return <AuthContext>
-        {Children}
+        {children}
     </AuthContext>
 }

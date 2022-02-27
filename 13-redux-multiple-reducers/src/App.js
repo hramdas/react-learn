@@ -1,7 +1,7 @@
-import {Todos} from './components/Todos'
-import {Counter} from './components/Counter'
-import './App.css';
-import {Route, Routes} from 'react-router-dom'
+import { Todos } from "./components/Todos";
+import { Counter } from "./components/Counter";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
           </div>
        }></Route>
       </Routes> */}
-       <Todos />
-       <Counter />
+      {/* <Todos /> */}
+      <Counter />
     </div>
   );
 }

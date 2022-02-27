@@ -1,11 +1,14 @@
-
+import Filter from './Filter'
 
 const List = ({getdata}) =>{
     // const handleData = ()=>{
     //     console.log(getdata)
     // }
     return(
+        <div id="list">
+            <Filter />
         <table>
+        
             <thead>
                 <tr>
                     <th>Name</th>
@@ -33,7 +36,8 @@ const List = ({getdata}) =>{
                 )}
             </tbody>
         </ table>
-    )
+        </ div>
+    ) 
 }
 
 export default List

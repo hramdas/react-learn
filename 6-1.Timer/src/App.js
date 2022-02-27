@@ -33,6 +33,7 @@ const Button = styled.button`
 
 function App() {
   const [showtime, setShowtime] = useState(false)
+
   const [time, setTime] = useState({})
   // const [end, setEnd] = useState(null)
 
@@ -41,9 +42,10 @@ function App() {
   
     setTime({...time, [name] : value})
   }
+
   const handleClick = (e)=>{
     e.preventDefault()
-    console.log()
+    // console.log()
     setShowtime(!showtime)
   }
 
@@ -53,14 +55,11 @@ function App() {
       { showtime ? < Timer data={time}  /> : null}
 
       <Form>
-      <input  type="number" name="start" placeholder='Start value' onChange={handleChange}  />
-      <input type="number" name="end" placeholder='Final value' onChange={handleChange} />
+        <input  type="number" name="start" placeholder='Start value' onChange={handleChange}  />
+        <input type="number" name="end" placeholder='Final value' onChange={handleChange} />
 
-      <Button onClick={ handleClick} >{showtime ? "Hide" : "Show"}</Button>
-
+        <Button onClick={ handleClick} >{showtime ? "Hide" : "Show"}</Button>
       </Form>
-
-      
 
    </div>
  )

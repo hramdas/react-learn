@@ -29,6 +29,64 @@
       "isMarried": true,
       "photo": "blob:http://localhost:3000/e016031f-37fa-4bb6-9053-50f04d2434dc",
       "id": 5
+    },
+    {
+      "name": "Ram Patil",
+      "address": "Navi peth, Pune",
+      "age": "23",
+      "department": "Operations",
+      "salary": "120000",
+      "photo": "blob:http://localhost:3000/9cff14b7-b28c-42d3-8c73-6c5657e40090",
+      "id": 6
+    },
+    {
+      "name": "Amitabh",
+      "address": "Navi peth, Mumbai",
+      "age": "68",
+      "department": "Marketing",
+      "salary": "12000",
+      "photo": "blob:http://localhost:3000/dd87075e-1da8-40de-9eab-266ec984cb67",
+      "id": 7
+    },
+    {
+      "name": "Babu Bhaiya",
+      "address": "Goregaon, Mumbai",
+      "age": "55",
+      "department": "Operations",
+      "salary": "300000",
+      "photo": "blob:http://localhost:3000/9cc4c5a9-6849-4114-b216-a1f9a3256e0a",
+      "isMarried": true,
+      "id": 8
+    },
+    {
+      "name": "Aapla Manus",
+      "address": "Shivaji Nagar, Pune",
+      "age": "65",
+      "department": "Human Resource",
+      "salary": "30000",
+      "photo": "blob:http://localhost:3000/0e3d6f74-98d1-4600-9740-e9d714bb363d",
+      "isMarried": true,
+      "id": 9
+    },
+    {
+      "name": "Joker ",
+      "address": "Pune",
+      "age": "35",
+      "department": "Marketing",
+      "salary": "40000",
+      "photo": "blob:http://localhost:3000/c736feda-425b-4dc1-85f1-8188bc272a69",
+      "isMarried": true,
+      "id": 10
+    },
+    {
+      "name": "Simba Cat",
+      "address": "Nanded",
+      "age": "4",
+      "department": "Human Resource",
+      "salary": "44000",
+      "photo": "blob:http://localhost:3000/f593c0cc-1d31-4e90-b1b8-de34c920f857",
+      "isMarried": false,
+      "id": 11
     }
   ]
 }

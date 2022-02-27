@@ -1,8 +1,7 @@
 .App {
   text-align: center;
-  display: grid;
-  grid-template-columns: 70% 25%;
-  grid-gap: 3%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .App-logo {
@@ -64,10 +63,13 @@ table tr > th, td{
 }
 
 .form{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   width: 300px;
-  /* float: left; */
+  height: 55vh;
   margin: 20px;
   background-color: aqua;
   padding: 30px;

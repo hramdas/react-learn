@@ -10,7 +10,7 @@ import {PrivateRoute} from './components/PrivateRoute'
 function App() {
   return (
     <div className="App">
-      <Navigation />
+     <Navigation />   {/* nav bar */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

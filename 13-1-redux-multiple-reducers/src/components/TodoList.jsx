@@ -8,13 +8,14 @@ export const TodoList = () => {
     useEffect(() => {
         getTodos()
     }, []);
+     
     const  getTodos =()=>{
         fetch("http://localhost:3001/todos")
         .then(req=>req.json())
         .then(res=>dispatch(getTodo(res)))
         .catch(e=>console.group(e.message))
     }
-    
+
     const todos = useSelector((state)=>state.TodoReducer)
     console.log(todos)
   return (

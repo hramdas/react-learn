@@ -19,9 +19,7 @@ export const Todo = () =>{
         .then(()=>{
             getTodo()
             setText("")
-        } 
-        
-        )
+        })
     }
 
     const getTodo = ()=>{

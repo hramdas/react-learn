@@ -3,11 +3,14 @@ import { Reducer as TodosReducer } from "../features/Todos/reducer";
 import { Reducer as CounterReducer } from "../features/Counter/reducer";
 
 const rootReducer = combineReducers({
-    CounterState : CounterReducer,
-    TodosState : TodosReducer
-})
+  CounterState: CounterReducer,
+  TodosState: TodosReducer,
+});
 
 //All reducers
-export const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__())
+export const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-console.log("Entire state", store.getState())
+console.log("Entire state", store.getState());

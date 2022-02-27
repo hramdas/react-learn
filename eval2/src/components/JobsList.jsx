@@ -26,6 +26,12 @@ export const JobsList = () => {
     if(!list){
         return <h1>Loading...</h1>
     }
+
+    const handleDelete = ()=>{
+        fetch(`http://localhost:3001/jobs/3`,{
+             method: "DELETE"
+        })
+    }
     return (
         <div>
             {/* <Navbar /> */}
@@ -39,6 +45,7 @@ export const JobsList = () => {
                         <span><b>Type :</b> {job.type}</span>
                     </div>
                     <p><b>Description : </b>{job.description}</p>
+                    <button onClick={handleDelete}>Delete</button>
                 </div>
             ))}
         </div>

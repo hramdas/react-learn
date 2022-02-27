@@ -5,7 +5,6 @@ import { addTodo } from '../store/action';
 export const Input = () => {
     const [text, setText] = useState("");
     const dispatch = useDispatch()
-
     const handleChange = (e)=>{
         setText(e.target.value)
     }
@@ -22,12 +21,12 @@ export const Input = () => {
             body : JSON.stringify(payload)
         }).then(req=>req.json())
         .then(res=>dispatch(addTodo(res)))
-        .catch(e=>console.group(e.message))
+        .catch(e=>console.log(e.message))
         setText("")
     }
   return (
     <div>
-        <input value={text} onChange={handleChange} placeholder='Type todo' />
+        <input value={text} onChange={handleChange} placeholder='Enter todo' />
         <button onClick={handleClick} >Add </button>
     </div>
   )

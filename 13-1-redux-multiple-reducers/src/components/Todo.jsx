@@ -7,10 +7,12 @@ import { TodoList } from './TodoList';
 
 export const Todo = () => {
     // const [todos, setTodos] = useState([]);
+
+    // let scrollStyle = ()=>{scrollTop > 0 ? backgroundColor :"red" : backgroundColor:"white"}
   
   return (
-    <div>
-        <Input/>
+    <div >
+        <Input />
         <TodoList />
         {/* <TodoList todos={todos}/> */}
     </div>

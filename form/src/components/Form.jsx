@@ -38,8 +38,8 @@ function Form(){
 
     return(
         <>
-         < List getdata = {formData} />
-       < Input postData = {handleSubmit} />
+        <List getdata = {formData} />
+        <Input postData = {handleSubmit} />
       
         </>
     )

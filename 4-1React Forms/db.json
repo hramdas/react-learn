@@ -1,51 +1,13 @@
 {
   "forms": [
     {
-      "form": {
-        "name": "RAMDAS GANPATRAO HEDGAPURE",
-        "age": "44",
-        "address": "PATIL GALLI, MANUR TQ DEGLOOR",
-        "department": "Human Resource",
-        "salary": "444",
-        "isMarried": true
-      },
-      "photo": "blob:http://localhost:3000/174bf131-db8e-4923-be47-ae5754c981a2",
-      "id": "a80_1oK"
+      "id": 1
     },
     {
-      "form": {
-        "name": "RAMDAS GANPATRAO HEDGAPURE",
-        "age": "44",
-        "address": "PATIL GALLI, MANUR TQ DEGLOOR",
-        "department": "Human Resource",
-        "salary": "444",
-        "isMarried": true,
-        "photo": "C:\\fakepath\\Screenshot (22).png"
-      },
-      "photo": "blob:http://localhost:3000/4113e9a2-2a4b-4ee3-8c07-fea973268e76",
-      "id": "cnFepF6"
+      "id": 2
     },
     {
-      "form": {
-        "name": "RAMDAS GANPATRAO HEDGAPURE",
-        "age": "44",
-        "address": "PATIL GALLI, MANUR TQ DEGLOOR",
-        "department": "Finance ",
-        "salary": "44",
-        "isMarried": true,
-        "photo": "blob:http://localhost:3000/7b2492cd-b2da-43de-b033-7ce02471ff3b"
-      },
-      "id": "1Gp09qb"
-    },
-    {
-      "name": "RAMDAS GANPATRAO HEDGAPURE",
-      "age": "44",
-      "address": "PATIL GALLI, MANUR TQ DEGLOOR",
-      "department": "Finance ",
-      "salary": "44",
-      "isMarried": true,
-      "photo": "blob:http://localhost:3000/836b0e38-ea9e-46c4-9b35-5e87e8ca6ec8",
-      "id": "HT6YqAC"
+      "id": 3
     }
   ]
 }
