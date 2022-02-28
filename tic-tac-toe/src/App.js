@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Result } from "./components/Result";
+
 import { Square } from "./components/Square";
 const initialBoard = ["", "", "", "", "", "", "", "", ""];
 function App() {
   const [board, setBoard] = useState(initialBoard);
   const [Xstatus, setXstatus] = useState(true);
-  // const [FinalRes, setFinalRes] = useState(null);
 
   const handleClick = (i) => {
     if (board[i]) return;
@@ -21,7 +20,6 @@ function App() {
     let res = checkResult();
     if (res) {
       alert(res + " is winner");
-      // setFinalRes(res);
       setBoard(initialBoard);
     }
   }, [board]);
@@ -53,7 +51,6 @@ function App() {
   return (
     <div className="App">
       <p>Tic Tac Toe</p>
-      {/* {FinalRes ? <Result res={FinalRes} /> : <span></span>} */}
       <div className="MainBox">
         <span>
           <Square
