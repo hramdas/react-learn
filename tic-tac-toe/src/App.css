@@ -1,3 +1,59 @@
 .App {
   text-align: center;
 }
+.App > p {
+  font-size: 25px;
+  background-color: rgb(163, 106, 0);
+  padding: 5px 0px;
+  color: white;
+  width: 200px;
+  margin: 20px auto;
+}
+.MainBox {
+  border: 10px solid brown;
+  max-width: 500px;
+  margin: auto;
+}
+
+.MainBox > span {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+}
+.MainBox > span div {
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  padding: 30px;
+}
+
+/* @media only screen and (max-width: 530px) {
+  .MainBox {
+    max-width: 500px;
+  }
+  .MainBox span div {
+    width: 100px;
+    height: 100px;
+  }
+} */
+.MainBox .box {
+  border-bottom: 10px solid gray;
+  border-right: 10px solid gray;
+}
+.MainBox .box-3 {
+  border-bottom: 10px solid gray;
+}
+.MainBox .bottom-box {
+  border-right: 10px solid gray;
+}
+.App button {
+  padding: 5px 25px;
+  background-color: crimson;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
