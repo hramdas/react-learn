@@ -29,15 +29,6 @@
   padding: 30px;
 }
 
-/* @media only screen and (max-width: 530px) {
-  .MainBox {
-    max-width: 500px;
-  }
-  .MainBox span div {
-    width: 100px;
-    height: 100px;
-  }
-} */
 .MainBox .box {
   border-bottom: 10px solid gray;
   border-right: 10px solid gray;
