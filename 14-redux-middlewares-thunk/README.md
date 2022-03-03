@@ -20,4 +20,7 @@ actions, action creators, reducer
     
     
 ## Store
+  export const store = createStore(
+  rootReducer,
   compose(applyMiddleware(thunk)
+);
