@@ -1,18 +1,26 @@
 actions, action creators, reducer
 
 1
-Counter :
+## Counter :
     /actions.js
     /actionTypes.js
     /reducer.js
-Todos :
+    
+## Todos :
     /actions.js
     /actionTypes.js
     /reducer.js
 
 2.
-Actions :
+## Actions :
     CounterAction.js
     TodoAction.js
-ActionTypes :
+## ActionTypes :
     CounterActionType.js
+    
+    
+## Store
+    export const store = createStore( 
+        rootReducer,
+        compose(applyMiddleware(thunk)
+    );
