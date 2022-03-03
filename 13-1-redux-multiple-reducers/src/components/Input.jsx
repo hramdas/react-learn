@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../store/action';
+import { todos } from '../utils/request';
 
 export const Input = () => {
     const [text, setText] = useState("");
@@ -8,25 +9,19 @@ export const Input = () => {
     const handleChange = (e)=>{
         setText(e.target.value)
     }
-    const handleClick = ()=>{
-        const payload = {
-            title :text,
+    const handleClick = async ()=>{
+        
+        const {data} = await todos.post('/',{
+             title :text,
             status:false
-        }
-        fetch("http://localhost:3001/todos",{
-            method:"POST",
-            headers : {
-                "Content-Type":"application/json"
-            },
-            body : JSON.stringify(payload)
-        }).then(req=>req.json())
-        .then(res=>dispatch(addTodo(res)))
-        .catch(e=>console.log(e.message))
+        })
+        dispatch(addTodo(data))
         setText("")
     }
+
   return (
     <div>
-        <input value={text} onChange={handleChange} placeholder='Enter todo' />
+        <input value={text} type="text"onChange={handleChange} placeholder='Enter todo'/>
         <button onClick={handleClick} >Add </button>
     </div>
   )

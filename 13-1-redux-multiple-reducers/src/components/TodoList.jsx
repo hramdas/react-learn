@@ -1,26 +1,27 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { getTodo } from '../store/action'
+import { getTodo, getData } from '../store/action'
+import {todos} from '../utils/request'
 
 export const TodoList = () => {
     const dispatch = useDispatch()
+
+    async function getTodos(){
+        // const {data} = await todos.get('/')
+        dispatch(getData)
+        // getData()
+    }
+   
     useEffect(() => {
         getTodos()
     }, []);
-     
-    const  getTodos =()=>{
-        fetch("http://localhost:3001/todos")
-        .then(req=>req.json())
-        .then(res=>dispatch(getTodo(res)))
-        .catch(e=>console.group(e.message))
-    }
 
-    const todos = useSelector((state)=>state.TodoReducer)
-    console.log(todos)
+    const todoData = useSelector((state)=>state.TodoReducer)
+   
   return (
     <div>
-        { todos ? todos.map((e, i)=>(
+        { todoData ? todoData.map((e, i)=>(
             <div key={i}>{e.title}</div>
         )):<span></span>}
 

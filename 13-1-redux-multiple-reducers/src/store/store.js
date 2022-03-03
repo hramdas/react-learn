@@ -1,10 +1,8 @@
-import { combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import { Reducer as TodoReducer } from "./reducer";
+import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({ TodoReducer });
-export const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+export const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 
 console.log("GetState", store.getState());
