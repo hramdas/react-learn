@@ -14,7 +14,7 @@ export const Todo = () => {
     <div >
         <Input />
         <TodoList />
-        {/* <TodoList todos={todos}/> */}
+  
     </div>
   )
 }
