@@ -9,13 +9,14 @@ function App() {
 
   const handleClick = (i) => {
     if (board[i]) return;
-
     const boardStrings = Array.from(board);
     boardStrings[i] = Xstatus ? "x" : "o";
     setBoard(boardStrings);
 
     setXstatus(!Xstatus);
   };
+
+  //Check result
   useEffect(() => {
     let res = checkResult();
     if (res) {
@@ -23,7 +24,6 @@ function App() {
       setBoard(initialBoard);
     }
   }, [board]);
-
   const checkResult = () => {
     const results = [
       [0, 1, 2],
@@ -43,7 +43,7 @@ function App() {
     }
     return null;
   };
-
+  //Reset board
   const handleReset = () => {
     setBoard(initialBoard);
   };
