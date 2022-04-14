@@ -1,0 +1,21 @@
+header{
+    padding: 3px 1%;
+    display: flex;
+    justify-content:space-between;
+    background-color:rgb(120, 173, 15)
+}
+
+.header-menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    /* justify-content: space-evenly */
+}
+.header-menu li{
+    color:white;;
+  height: 50px;
+  margin: auto 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  vertical-align: bottom;
+}
